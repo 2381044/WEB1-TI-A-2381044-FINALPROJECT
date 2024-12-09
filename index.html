@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full Width Background</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0">
+      <div
+        class="container mx-auto flex items-center justify-between py-4 px-6"
+      >
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+          <img src="logo.jpg" alt="Domino's Logo" class="h-20" />
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="hidden md:flex space-x-6 text-base font-bold text-gray-800">
+          <a href="#" class="hover:text-blue-500">HOME</a>
+          <a href="biodata.html" class="hover:text-blue-500">BIODATA</a>
+          <a href="contact_us.html" class="hover:text-blue-500">CONTACT US</a>
+        </nav>
+
+        <!-- Account Icon -->
+        <div class="flex items-center space-x-2">
+          <a href="#" class="text-gray-800 hover:text-blue-500">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5.121 17.804A8.962 8.962 0 0112 15c2.21 0 4.209.896 5.879 2.348M15 10a3 3 0 11-6 0 3 3 0 016 0z"
+              />
+            </svg>
+          </a>
+          <span class="text-sm font-medium">MY ACCOUNT</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Delivery and Pickup Buttons -->
+    <div class="bg-gray-300 py-6 sticky top-0">
+      <div class="container mx-auto flex justify-center">
+        <button
+          class="flex items-center px-6 py-3 bg-blue-600 text-white font-bold text-lg rounded-l-md"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 mr-2"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3 10h11M9 21h6a2 2 0 002-2V7H7v12a2 2 0 002 2zM5 10V7a2 2 0 012-2h10a2 2 0 012 2v3"
+            />
+          </svg>
+          DELIVERY
+        </button>
+        <button
+          class="flex items-center px-8 py-3 bg-red-600 text-white font-bold text-lg rounded-r-md"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 mr-2"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3 3h18M3 9h18M10 21v-6m4 6v-6"
+            />
+          </svg>
+          PICK UP
+        </button>
+      </div>
+    </div>
+    <div class="max-w-screen-lg mx-auto px-4 py-8">
+      <!-- Upper Section -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+        <!-- Large Promo -->
+        <div class="lg:col-span-2">
+          <img
+            src="doublecheese.avif"
+            alt="Double Cheeseburger Pizza"
+            class="w-full h-auto"
+          />
+        </div>
+        <!-- Smaller Promos -->
+        <div class="grid grid-rows-2 gap-4">
+          <img
+            src="3590.avif"
+            alt="Buy 1 Free 2 Pizza"
+            class="w-full h-auto shadow-lg"
+          />
+          <img
+            src="3.avif"
+            alt="50% Off All Pizzas"
+            class="w-full h-auto shadow-lg"
+          />
+        </div>
+      </div>
+
+      <!-- Lower Section -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+        <img src="1.avif" alt="Box Ku Caramu" class="w-full h-auto" />
+        <img src="2.avif" alt="Blueberry Pizza Fold" class="w-full h-auto" />
+        <img src="4.avif" alt="Crispy Fries" class="w-full h-auto" />
+      </div>
+    </div>
+
+    <div class="max-w-5xl mx-auto p-4">
+      <h1 class="text-3xl text-gray-800 text-center mb-6">
+        DEALS <span class="text-green-500 font-bold">CHANGE?</span>
+      </h1>
+
+      <div class="grid md:grid-cols-3 gap-4">
+        <!-- First Deal -->
+        <div class="">
+          <div class="bg-green-500 text-white text-center py-2 shadow-xl mb-4">
+            <p class="text-lg font-bold">
+              1 PIZZA + CHICKEN SIDE + MUSHROOM SOUP & GARLIC BREAD FROM RM35.90
+              *
+            </p>
+          </div>
+          <p class="text-lg font-bold text-gray-800 mb-2">
+            1 PIZZA + CHICKEN SIDE + MUSHROOM SOUP & GARLIC BREAD FROM RM35.90
+          </p>
+          <p class="text-green-500 font-semibold mb-4">DELIVERY OR PICK UP</p>
+          <p class="text-gray-700 text-sm font-medium">
+            OFFER CODE: <span class="font-bold">B1FTWOM</span>
+          </p>
+          <p class="text-gray-500 text-xs">
+            * Terms and conditions apply.
+            <a href="#" class="text-blue-500 underline">Ts &amp; Cs</a>
+          </p>
+          <button
+            class="bg-gray-200 text-gray-800 font-bold w-full py-2 mt-4 rounded-b-lg"
+          >
+            ORDER NOW
+          </button>
+        </div>
+
+        <!-- Second Deal -->
+        <div class="">
+          <div class="bg-green-500 text-white text-center py-2 shadow-xl mb-4">
+            <p class="text-lg font-bold">
+              3 REGULAR <br />PIZZAS <br />FROM RM58.90 *
+            </p>
+          </div>
+          <p class="text-lg font-bold text-gray-800 mb-2">
+            3 REGULAR <br />
+            PIZZAS <br />FROM RM58.90
+          </p>
+          <p class="text-green-500 font-semibold mb-4">DELIVERY OR PICK UP</p>
+          <p class="text-gray-700 text-sm font-medium">
+            OFFER CODE: <span class="font-bold">3PDRK</span>
+          </p>
+          <p class="text-gray-500 text-xs">
+            * Terms and conditions apply.
+            <a href="#" class="text-blue-500 underline">Ts &amp; Cs</a>
+          </p>
+          <button
+            class="bg-gray-200 text-gray-800 font-bold w-full py-2 mt-4 rounded-b-lg"
+          >
+            ORDER NOW
+          </button>
+        </div>
+
+        <!-- Third Deal -->
+        <div class="">
+          <div class="bg-green-500 text-white text-center py-2 shadow-xl mb-4">
+            <p class="text-lg font-bold">
+              2 REGULAR PIZZAS + 1 BREAD + 2 MUSHROOM SOUPS FROM RM39.90*
+            </p>
+          </div>
+          <p class="text-lg font-bold text-gray-800 mb-2">
+            2 REGULAR PIZZAS + 1 BREAD + 2 MUSHROOM SOUPS <br />FROM RM39.90
+          </p>
+          <p class="text-green-500 font-semibold mb-4">DELIVERY OR PICK UP</p>
+          <p class="text-gray-700 text-sm font-medium">
+            OFFER CODE: <span class="font-bold">FUYOH4S</span>
+          </p>
+          <p class="text-gray-500 text-xs">
+            * Terms and conditions apply.
+            <a href="#" class="text-blue-500 underline">Ts &amp; Cs</a>
+          </p>
+          <button
+            class="bg-gray-200 text-gray-800 font-bold w-full py-2 mt-4 rounded-b-lg"
+          >
+            ORDER NOW
+          </button>
+          <br />
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-5xl mx-auto">
+      <br />
+      <h1 class="text-2xl font-bold text-gray-800 mb-4">
+        Domino's Pizza - The Best Pizza Delivery Expert In Malaysia
+      </h1>
+      <p class="text-gray-600 leading-relaxed mb-4">
+        It is our commitment to be the best pizza joint in Malaysia and offer
+        great value for all pizza lovers from around the world. Domino's Pizza
+        has won the hearts of many with a variety of great-tasting signature
+        pizzas delivered quickly to your doorstep while maintaining the
+        freshness and its state of piping hotness, for a hearty meal with family
+        and friends. Domino's Pizza Malaysia has grown by leaps and bounds since
+        it first began its operations in 1997.
+      </p>
+      <p class="text-gray-600 leading-relaxed mb-4">
+        From a single store in USJ with a headcount of 15 staffs, the pizza
+        chain today has over 260 stores in Malaysia and over 40 stores in
+        Singapore with a headcount of over 4,000 staffs. Domino's Pizza Malaysia
+        has grown strength to strength in providing great value through
+        delicious pizzas delivered fast. Throughout time, Domino's has also been
+        upgrading its menu and food choices by offering limited-time flavors and
+        variety such as Cheese Volcano Pizza, Ssamjeang Pizza, and Mega Cheese
+        Pizza.
+      </p>
+      <h2 class="text-xl font-bold text-gray-800 mt-6 mb-4">
+        Searching For 'Food or Pizza Delivery Near Me'? Domino's Pizza Malaysia
+        Is Just Around The Corner With Nationwide Delivery
+      </h2>
+      <p class="text-gray-600 leading-relaxed">
+        Look for a
+        <a href="#" class="text-blue-500 underline"
+          >Domino's Pizza restaurant near you</a
+        >
+        when you are in search of the best and freshest pizza. Be it for
+        delivery or takeaway from the nearest Domino's pizza outlet, we have
+        pizza makers ready to make fresh and hot pizzas to satisfy your
+        cravings.
+      </p>
+      <br />
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-6">
+      <div class="container max-w-5xl mx-auto text-left">
+        <h2 class="font-bold text-white">Terms and Conditions</h2>
+        <p class="text-sm text-gray-300 font-bold">
+          *Surcharge applies for the following crusts (Cheese Burst & Cheese
+          Tarik), Classics, First Class and Premium range. Illustrations shown
+          are for representation only. Price is inclusive of 6% Service Tax.
+          Prices are subject to change without prior notice. <br /><br />Pick Up
+          is valid with a minimum of any purchase. Surcharge applies for extra
+          condiments. Domino’s reserves the right to replace and/or amend the
+          terms & conditions without prior notice. rata kiri.
+        </p>
+        <br />
+      </div>
+    </footer>
+  </body>
+</html>
