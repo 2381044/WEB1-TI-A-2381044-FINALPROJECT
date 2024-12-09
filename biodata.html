@@ -1,128 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Biodata</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/x-icon" href="favicon domino.ico">
-</head>
-<body>
-<header class="header">
-  <div class="logo">
-    <img src="logo.jpg" alt="Domino's Logo">
-    
-  </div>
-  <nav class="nav-menu">
-    <ul>
-      <li><a href="file:///Users/karla/Desktop/WEB%201/MIDPROJECT/index.html#">HOME</a></li>
-      <li><a href="biodata.html" target="_blank">BIODATA</a></li>
-      <li><a href="contact_us.html" target="_blank">CONTACT US</a></li>
-    </ul>
-  </nav>
-  <div class="account">
-    <a href="free_page.html">My Account</a>
-  </div>
-</header>
-
-<section class="biodata">
-    <div class="biodata-content">
-      <h2>About Me</h2>
-      <p>
-        Hello! I’m Karla, a third-semester student at Universitas Advent Indonesia (UNAI) majoring in Informatics Engineering. <br>
-          I'm currently learning web development, especially in frontend development, where I focus on creating visually appealing interfaces. <br>I enjoy learning new technologies and improving my skills to create interactive web experiences.
-      </p>
-    </div>
-    
-
-    <div class="biodata-info">
-        <div class="profile">
-            <img src="profile.jpeg" alt="my picture">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biodata</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="favicon domino.ico">
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <!-- Header -->
+    <header class="bg-white p-0,5 shadow-md sticky top-0 items-center">
+      <div
+        class="container mx-auto flex items-center justify-between py-4 px-6"
+      >
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+          <img src="logo.jpg" alt="Domino's Logo" class="h-20" />
         </div>
-        <div class="info-box-main">
-      <div class="info-box">
-        <h3>Personal Information</h3>
-        <ul>
-            <li><strong>Full name:</strong> Karla Shanessa Tauran</li>
-            <li><strong>Place Date of Birth:</strong> Jakarta, April 21, 2005</li>
-            <li><strong>Age:</strong> 19 years old</li>
-            <li><strong>Major:</strong> Informatics Engineering</li>
-            <li><strong>Hobbies:</strong> singing & cooking</li>
-        </ul>
-      </div>
 
-      <div class="info-box">
-        <h3>Testimonial</h3>
-        <p><strong>Like</strong> What I like about learning web development is that I get to explore myself further when creating a website, increase my knowledge further and it's fun when I succeed in creating a web development.</p>
-        <p><strong>Don't Like:</strong> What I don't like is when I can't find a way to make the website I have in mind or the one I'm imitating, it's very frustrating..</p>
+        <!-- Navigation Links -->
+        <nav class="hidden md:flex space-x-6 text-base font-bold text-gray-800">
+          <a href="index.html" class="hover:text-blue-500 text-xl">HOME</a>
+          <a href="biodata.html" class="hover:text-blue-500 text-xl">BIODATA</a>
+          <a href="contact_us.html" class="hover:text-blue-500 text-xl">CONTACT US</a>
+          <a href="posts.html" class="hover:text-blue-500 text-xl">POSTS</a>
+        </nav>
+
+        <!-- Account Icon -->
+        <div class="flex items-center space-x-2">
+          <a href="#" class="text-gray-800 hover:text-blue-500">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5.121 17.804A8.962 8.962 0 0112 15c2.21 0 4.209.896 5.879 2.348M15 10a3 3 0 11-6 0 3 3 0 016 0z"
+              />
+            </svg>
+          </a>
+          <a href="freepage.html" class="text-xl font-bold items-center">MY ACCOUNT</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="container mx-auto p-6 max-w-4xl">
+      <!-- Header -->
+      <header class="text-center mb-8">
+        <h1 class="text-3xl font-bold text-gray-800">Personal Information</h1>
+        
+      </header>
+  
+      <!-- Personal Information -->
+      <section class="bg-white rounded-lg shadow-md p-6 mb-8">
+       
+        <div class="flex flex-col md:flex-row items-center md:items-start">
+          <!-- Photo -->
+          <div class="w-32 h-32 rounded-full overflow-hidden shadow-lg mb-4 md:mb-0 md:mr-6">
+            <img src="61D4E4B1-53DA-4891-B62B-FE082825D2A3_1_105_c.jpeg" alt="Karla Shanessa Tauran" class="w-full h-full object-cover">
+          </div>
+  
+          <!-- Details -->
+          <div>
+            <p><strong>Name      :</strong> Karla Shanessa Tauran</p>
+            <p><strong>Student ID:</strong> 2381044</p>
+            <p><strong>Faculty   :</strong> Faculty of Information Technology</p>
+            <p><strong>Hobbies   :</strong> Listening to classical music, cooking, singing</p>
+            <p><strong>Skills    :</strong></p>
+            <ul class="list-disc list-inside">
+              <li>Strong Interpersonal Communication</li>
+              <li>Event and Team Organization</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+  
+      <!-- Testimonial Section -->
+      <section class="bg-white rounded-lg shadow-md p-6">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Testimonial</h2>
+        <blockquote class="italic text-gray-600">
+          "The class has been an incredible learning experience that greatly contributed to my personal growth. Despite the abundance of material and the relatively short timeframe, I managed to absorb a wealth of knowledge. The most valuable aspect was tackling various assignments that required interaction with others, where I had the opportunity to help and be helped in return. This process not only deepened my understanding of the subjects but also strengthened my collaborative and problem-solving skills."
+        </blockquote>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <div class="bg-[#323232] py-6">
+      <div class="container max-w-5xl mx-auto text-left">
+        <h2 class="font-bold text-white">Terms and Conditions</h2>
+        <p class="text-sm text-gray-300 font-bold">
+          *Surcharge applies for the following crusts (Cheese Burst & Cheese
+          Tarik), Classics, First Class and Premium range. Illustrations shown
+          are for representation only. Price is inclusive of 6% Service Tax.
+          Prices are subject to change without prior notice. <br /><br />Pick Up
+          is valid with a minimum of any purchase. Surcharge applies for extra
+          condiments. Domino’s reserves the right to replace and/or amend the
+          terms & conditions without prior notice. rata kiri.
+        </p>
+        <br />
       </div>
     </div>
-    </div>
-  </section>
+    <br>
 
 
+    <footer class="max-w-5xl mx-auto"                                                                                                                       c p-6">
+      <div class="grid grid-cols-4 gap-4 text-gray-800 text-sm">
+        <div>
+          <h5 class="font-bold mb-2">Domino's Pizza</h5>
+          <ul>
+            <li><a href="#" class="hover:underline">Order Online</a></li>
+            <li><a href="#" class="hover:underline">Our Menu</a></li>
+            <li>
+              <a href="#" class="hover:underline"
+                >Allergen & Nutritional Information</a
+              >
+            </li>
+            <li><a href="#" class="hover:underline">Promotions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-bold mb-2">Contact Us</h5>
+          <ul>
+            <li><a href="#" class="hover:underline">Contact Details</a></li>
+            <li><a href="#" class="hover:underline">Feedback</a></li>
+            <li>
+              <a href="#" class="hover:underline">Information Security</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-bold mb-2">Help</h5>
+          <ul>
+            <li><a href="#" class="hover:underline">Store Finder</a></li>
+            <li><a href="#" class="hover:underline">FAQs</a></li>
+            <li>
+              <a href="#" class="hover:underline">Malaysian E-Invoice FAQs</a>
+            </li>
+            <li><a href="#" class="hover:underline">Scam Alert</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-bold mb-2">Corporate</h5>
+          <ul>
+            <li><a href="#" class="hover:underline">About Us</a></li>
+              <li><a href="https://fti.unai.edu/">FTI UNAI</a></li>
+              <li><a href="https://unai.edu/">UNAI Website</a></li>
+              
+          </ul>
+        </div>
 
+        <div class="container max-w-5xl mx-auto flex flex-col items-center">
+          <!-- Social Media Links -->
+          <div class="flex justify-center space-x-8 mb-6">
+            <a href="#" class="hover:opacity-75">
+              <img src="facebook.png" alt="Facebook" class="h-10 w-10">
+            </a>
+            <a href="#" class="hover:opacity-75">
+              <img src="youtube.png" alt="YouTube" class="h-10 w-10">
+            </a>
+            <a href="#" class="hover:opacity-75">
+              <img src="instagram.png" alt="Instagram" class="h-10 w-10">
+            </a>
+          </div>
+        
+          <!-- App Download Buttons -->
+          <div class="flex justify-center space-x-6 mb-6">
+            <a href="#" class="hover:opacity-75">
+              <img src="appstore.png" alt="App Store" class="h-12">
+            </a>
+            <a href="#" class="hover:opacity-75">
+              <img src="google-play.png" alt="Google Play" class="h-12">
+            </a>
+          </div>
+        
+      
+          <div class="text-center text-sm text-gray-600">
+            <p>
+              PRIVACY POLICY | ONLINE TERMS AND CONDITIONS</a>
+            </p>
+          </div>
+        </div>
+        
 
+      </footer>
 
-
-
-<footer>
-
-  <div>
-      <h3>Domino's Pizza</h3>
-      <ul>
-          <li><a href="#">Order Online</a></li>
-          <li><a href="#">Our Menu</a></li>
-          <li><a href="#">Allergen & Nutritional Information</a></li>
-          <li><a href="#">Promotions</a></li>
-      </ul>
-  </div>
-
- 
-  <div>
-      <h3>Contact Us</h3>
-      <ul>
-          <li><a href="#">Contact Details</a></li>
-          <li><a href="#">Feedback</a></li>
-          <li><a href="#">Information Security</a></li>
-      </ul>
-  </div>
-
-
-  <div>
-      <h3>Help</h3>
-      <ul>
-          <li><a href="#">Store Finder</a></li>
-          <li><a href="#">FAQs</a></li>
-          <li><a href="#">Scam Alert</a></li>
-      </ul>
-  </div>
-
-
-  <div>
-      <h3>Corporate</h3>
-      <ul>
-          <li><a href="https://fti.unai.edu/">FTI UNAI</a></li>
-          <li><a href="https://unai.edu/">UNAI Website</a></li>
-          <li><a href="https://jurnal.unai.edu/index.php/teika">TeIKa</a></li>
-      </ul>
-  </div>
-</footer>
-
-<div class="social-media">
-  <a href="#"><img src="facebook.png" alt="Facebook"></a>
-  <a href="#"><img src="youtube.png" alt="YouTube"></a>
-  <a href="#"><img src="instagram.png" alt="Instagram"></a>
-</div>
-
-<div class="app-buttons">
-  <a href="#"><img src="appstore.png" alt="App Store"></a>
-  <a href="#"><img src="google-play.png" alt="Google Play"></a>
-</div>
-
-<div class="bottom-text">
-  <p>PRIVACY POLICY | ONLINE TERMS AND CONDITIONS</p>
-</div>
-
-
-</body>
+  </body>
+</html>

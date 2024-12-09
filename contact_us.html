@@ -1,145 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/x-icon" href="favicon domino.ico">
-</head>
-<body>
-<header class="header">
-  <div class="logo">
-    <img src="logo.jpg" alt="Domino's Logo">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="favicon domino.ico">
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <!-- Header -->
+    <header class="bg-white p-0,5 shadow-md sticky top-0 items-center">
+      <div
+        class="container mx-auto flex items-center justify-between py-4 px-6"
+      >
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+          <img src="logo.jpg" alt="Domino's Logo" class="h-20" />
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="hidden md:flex space-x-6 text-base font-bold text-gray-800">
+          <a href="index.html" class="hover:text-blue-500 text-xl">HOME</a>
+          <a href="biodata.html" class="hover:text-blue-500 text-xl">BIODATA</a>
+          <a href="contact_us.html" class="hover:text-blue-500 text-xl">CONTACT US</a>
+          <a href="posts.html" class="hover:text-blue-500 text-xl">POSTS</a>
+        </nav>
+
+        <!-- Account Icon -->
+        <div class="flex items-center space-x-2">
+          <a href="#" class="text-gray-800 hover:text-blue-500">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5.121 17.804A8.962 8.962 0 0112 15c2.21 0 4.209.896 5.879 2.348M15 10a3 3 0 11-6 0 3 3 0 016 0z"
+              />
+            </svg>
+          </a>
+          <a href="freepage.html" class="text-xl font-bold items-center">MY ACCOUNT</a>
+        </div>
+      </div>
+    </header>
+
+    <script>
+      function validateForm(event) {
+        event.preventDefault(); // Prevent form submission
+  
+        const fullName = document.getElementById('fullName').value.trim();
+        const studentID = document.getElementById('studentID').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const faculty = document.getElementById('faculty').value;
+        const dob = document.getElementById('dob').value;
+        const gender = document.querySelector('input[name="gender"]:checked');
+        const address = document.getElementById('address').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+  
+        if (!fullName || !studentID || !email || !faculty || !dob || !gender || !address || !phone) {
+          alert('Please fill out all fields.');
+          return;
+        }
+  
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+          alert('Please enter a valid email address.');
+          return;
+        }
+  
+        if (!/^[0-9]+$/.test(phone) || phone.length < 10) {
+          alert('Phone number must contain only numbers and be at least 10 digits long.');
+          return;
+        }
+  
+        alert('Registration successful!');
+        document.getElementById('registrationForm').reset();
+      }
+  
+      function highlightInput(event) {
+        event.target.classList.add('ring-2', 'ring-blue-500');
+      }
+  
+      function unhighlightInput(event) {
+        event.target.classList.remove('ring-2', 'ring-blue-500');
+      }
+    </script>
+  </head>
+  <body class="bg-gray-100 text-gray-800 font-sans">
+    <div class="container mx-auto p-6 max-w-3xl">
+      <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">Student Registration Form</h1>
+  
+      <form id="registrationForm" class="bg-white p-6 rounded-lg shadow-md" onsubmit="validateForm(event)">
+        <!-- Full Name -->
+        <div class="mb-4">
+          <label for="fullName" class="block text-sm font-medium text-gray-700">Full Name</label>
+          <input type="text" id="fullName" class="mt-1 p-2 w-full border rounded-md focus:outline-none" onfocus="highlightInput(event)" onblur="unhighlightInput(event)" />
+        </div>
+  
+        <!-- Student ID -->
+        <div class="mb-4">
+          <label for="studentID" class="block text-sm font-medium text-gray-700">Student ID (NIM)</label>
+          <input type="text" id="studentID" class="mt-1 p-2 w-full border rounded-md focus:outline-none" onfocus="highlightInput(event)" onblur="unhighlightInput(event)" />
+        </div>
+  
+        <!-- Email Address -->
+        <div class="mb-4">
+          <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+          <input type="email" id="email" class="mt-1 p-2 w-full border rounded-md focus:outline-none" onfocus="highlightInput(event)" onblur="unhighlightInput(event)" />
+        </div>
+  
+        <!-- Faculty/Major -->
+        <div class="mb-4">
+          <label for="faculty" class="block text-sm font-medium text-gray-700">Faculty/Major</label>
+          <select id="faculty" class="mt-1 p-2 w-full border rounded-md focus:outline-none" onfocus="highlightInput(event)" onblur="unhighlightInput(event)">
+            <option value="">Select your faculty</option>
+            <option value="Accounting">Accounting</option>
+            <option value="Informatics Engineering">Information Technology</option>
+            <option value="Information Systems">Information Systems</option>
+            <option value="Digital Business">Digital Business</option>
+  
+          </select>
+        </div>
+  
+        <!-- Date of Birth -->
+        <div class="mb-4">
+          <label for="dob" class="block text-sm font-medium text-gray-700">Date of Birth</label>
+          <input type="date" id="dob" class="mt-1 p-2 w-full border rounded-md focus:outline-none" onfocus="highlightInput(event)" onblur="unhighlightInput(event)" />
+        </div>
+  
+        <!-- Gender -->
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-700">Gender</label>
+          <div class="mt-2">
+            <label class="inline-flex items-center">
+              <input type="radio" name="gender" value="Male" class="form-radio" />
+              <span class="ml-2">Male</span>
+            </label>
+            <label class="inline-flex items-center ml-6">
+              <input type="radio" name="gender" value="Female" class="form-radio" />
+              <span class="ml-2">Female</span>
+            </label>
+          </div>
+        </div>
+  
+        <!-- Address -->
+        <div class="mb-4">
+          <label for="address" class="block text-sm font-medium text-gray-700">Address</label>
+          <textarea id="address" rows="3" class="mt-1 p-2 w-full border rounded-md focus:outline-none" onfocus="highlightInput(event)" onblur="unhighlightInput(event)"></textarea>
+        </div>
+  
+        <!-- Phone Number -->
+        <div class="mb-4">
+          <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+          <input type="text" id="phone" class="mt-1 p-2 w-full border rounded-md focus:outline-none" onfocus="highlightInput(event)" onblur="unhighlightInput(event)" />
+        </div>
+  
+        <!-- Submit Button -->
+        <div class="text-center">
+          <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+  
     
-  </div>
-  <nav class="nav-menu">
-    <ul>
-      <li><a href="file:///Users/karla/Desktop/WEB%201/MIDPROJECT/index.html#">HOME</a></li>
-      <li><a href="biodata.html" target="_blank">BIODATA</a></li>
-      <li><a href="contact_us.html" target="_blank">CONTACT US</a></li>
-    </ul>
-  </nav>
-  <div class="account">
-    <a href="free_page.html">My Account</a>
-  </div>
-</header>
-
-<div class="form">
-<h2>Contact Us</h2>
-    <form action="/submit_form" method="post">
-
-        <label for="first_name">First Name:</label>
-        <input type="text" id="first_name" name="first_name" required><br><br>
-
-        <label for="family_name">Family Name:</label>
-        <input type="text" id="family_name" name="family_name" required><br><br>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
-
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br><br>
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
-
-        <label>Gender:</label><br>
-        <input type="radio" id="male" name="gender" value="male">
-        <label for="male">Male</label><br>
-        <input type="radio" id="female" name="gender" value="female">
-        <label for="female">Female</label><br><br>
-
-        <label for="birthdate">Birthdate:</label>
-        <input type="date" id="birthdate" name="birthdate" required><br><br>
-
-        <label for="religion">Religion:</label>
-        <select id="religion" name="religion">
-            <option value="christianity">Christianity</option>
-            <option value="islam">Islam</option>
-            <option value="hinduism">Hinduism</option>
-            <option value="buddhism">Buddhism</option>
-            <option value="other">Other</option>
-        </select><br><br>
-
-        <label for="address">Address:</label><br>
-        <textarea id="address" name="address" rows="4" cols="50"></textarea><br><br>
-
-        <label>Hobbies:</label><br><br>
-        <input type="checkbox" id="reading" name="hobbies" value="reading">
-        <label for="reading">Reading</label><br>
-        <input type="checkbox" id="sports" name="hobbies" value="sports">
-        <label for="sports">Sports</label><br>
-        <input type="checkbox" id="music" name="hobbies" value="music">
-        <label for="music">Music</label><br><br>
-
-        <input type="submit" value="Save">
-    </form>
-</div>
+    <!-- Footer -->
+    <div class="bg-[#323232] py-6">
+      <div class="container max-w-5xl mx-auto text-left">
+        <h2 class="font-bold text-white">Terms and Conditions</h2>
+        <p class="text-sm text-gray-300 font-bold">
+          *Surcharge applies for the following crusts (Cheese Burst & Cheese
+          Tarik), Classics, First Class and Premium range. Illustrations shown
+          are for representation only. Price is inclusive of 6% Service Tax.
+          Prices are subject to change without prior notice. <br /><br />Pick Up
+          is valid with a minimum of any purchase. Surcharge applies for extra
+          condiments. Domino’s reserves the right to replace and/or amend the
+          terms & conditions without prior notice. rata kiri.
+        </p>
+        <br />
+      </div>
+    </div>
+    <br>
 
 
+    <footer class="max-w-5xl mx-auto"                                                                                                                       c p-6">
+      <div class="grid grid-cols-4 gap-4 text-gray-800 text-sm">
+        <div>
+          <h5 class="font-bold mb-2">Domino's Pizza</h5>
+          <ul>
+            <li><a href="#" class="hover:underline">Order Online</a></li>
+            <li><a href="#" class="hover:underline">Our Menu</a></li>
+            <li>
+              <a href="#" class="hover:underline"
+                >Allergen & Nutritional Information</a
+              >
+            </li>
+            <li><a href="#" class="hover:underline">Promotions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-bold mb-2">Contact Us</h5>
+          <ul>
+            <li><a href="#" class="hover:underline">Contact Details</a></li>
+            <li><a href="#" class="hover:underline">Feedback</a></li>
+            <li>
+              <a href="#" class="hover:underline">Information Security</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-bold mb-2">Help</h5>
+          <ul>
+            <li><a href="#" class="hover:underline">Store Finder</a></li>
+            <li><a href="#" class="hover:underline">FAQs</a></li>
+            <li>
+              <a href="#" class="hover:underline">Malaysian E-Invoice FAQs</a>
+            </li>
+            <li><a href="#" class="hover:underline">Scam Alert</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-bold mb-2">Corporate</h5>
+          <ul>
+            <li><a href="#" class="hover:underline">About Us</a></li>
+              <li><a href="https://fti.unai.edu/">FTI UNAI</a></li>
+              <li><a href="https://unai.edu/">UNAI Website</a></li>
+              
+          </ul>
+        </div>
 
+        <div class="container max-w-5xl mx-auto flex flex-col items-center">
+          <!-- Social Media Links -->
+          <div class="flex justify-center space-x-8 mb-6">
+            <a href="#" class="hover:opacity-75">
+              <img src="facebook.png" alt="Facebook" class="h-10 w-10">
+            </a>
+            <a href="#" class="hover:opacity-75">
+              <img src="youtube.png" alt="YouTube" class="h-10 w-10">
+            </a>
+            <a href="#" class="hover:opacity-75">
+              <img src="instagram.png" alt="Instagram" class="h-10 w-10">
+            </a>
+          </div>
+        
+          <!-- App Download Buttons -->
+          <div class="flex justify-center space-x-6 mb-6">
+            <a href="#" class="hover:opacity-75">
+              <img src="appstore.png" alt="App Store" class="h-12">
+            </a>
+            <a href="#" class="hover:opacity-75">
+              <img src="google-play.png" alt="Google Play" class="h-12">
+            </a>
+          </div>
+        
+      
+          <div class="text-center text-sm text-gray-600">
+            <p>
+              PRIVACY POLICY | ONLINE TERMS AND CONDITIONS</a>
+            </p>
+          </div>
+        </div>
+        
 
+      </footer>
 
-<footer>
-
-  <div>
-      <h3>Domino's Pizza</h3>
-      <ul>
-          <li><a href="#">Order Online</a></li>
-          <li><a href="#">Our Menu</a></li>
-          <li><a href="#">Allergen & Nutritional Information</a></li>
-          <li><a href="#">Promotions</a></li>
-      </ul>
-  </div>
-
- 
-  <div>
-      <h3>Contact Us</h3>
-      <ul>
-          <li><a href="#">Contact Details</a></li>
-          <li><a href="#">Feedback</a></li>
-          <li><a href="#">Information Security</a></li>
-      </ul>
-  </div>
-
-
-  <div>
-      <h3>Help</h3>
-      <ul>
-          <li><a href="#">Store Finder</a></li>
-          <li><a href="#">FAQs</a></li>
-          <li><a href="#">Scam Alert</a></li>
-      </ul>
-  </div>
-
-
-  <div>
-      <h3>Corporate</h3>
-      <ul>
-          <li><a href="https://fti.unai.edu/">FTI UNAI</a></li>
-          <li><a href="https://unai.edu/">UNAI Website</a></li>
-          <li><a href="https://jurnal.unai.edu/index.php/teika">TeIKa</a></li>
-      </ul>
-  </div>
-</footer>
-
-<div class="social-media">
-  <a href="#"><img src="facebook.png" alt="Facebook"></a>
-  <a href="#"><img src="youtube.png" alt="YouTube"></a>
-  <a href="#"><img src="instagram.png" alt="Instagram"></a>
-</div>
-
-<div class="app-buttons">
-  <a href="#"><img src="appstore.png" alt="App Store"></a>
-  <a href="#"><img src="google-play.png" alt="Google Play"></a>
-</div>
-
-<div class="bottom-text">
-  <p>PRIVACY POLICY | ONLINE TERMS AND CONDITIONS</p>
-</div>
-
-
-</body>
-
-
+  </body>
+</html>
